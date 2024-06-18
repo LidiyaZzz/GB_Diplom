@@ -1,0 +1,195 @@
+.offers
+  position: relative
+  &__decore   
+    &::after
+      content: ''
+      position: absolute
+      width: 400px
+      height: 400px
+      right: 60%
+      top: 30%
+      background: rgba(250, 121, 70, 0.363)
+      filter: blur(60px)
+      border-radius: 50%
+      z-index: 1
+  &__container
+    margin: 100px auto
+  &__title
+    text-align: center
+    font-weight: 400
+    margin: 1em 0
+  &__wrapper
+    border-radius: 8px
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: start
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      width: 440px
+      height: 440px
+      left: 0
+      top: 0
+      background: rgba(250, 120, 70, 0.35)
+      filter: blur(100px)
+      z-index: -1
+  &__list
+    list-style: none
+    width: 35%
+    & li
+      position: relative
+  &__description
+    height: 460px
+    overflow: auto
+    width: 60%
+    position: relative
+    z-index: 2
+  &__descriptionbg
+    position: absolute
+    z-index: -1
+    top: 0
+    left: 0
+    right: 0
+    width: 90%
+    height: 90%
+    object-fit: contain
+  &__item
+    display: block
+    text-align: right
+    margin-bottom: 0.5em
+    font-weight: 600
+    font-size: 1.2em
+    text-align: right
+    padding: 7px
+    border-bottom: 1px solid #F9EEE9
+    &-active
+      color: #FA7846
+  &__button
+    background-color: #ffcdb9
+    margin-left: auto
+    margin-top: 2em
+    & a
+      width: 100%
+      height: 100%
+      display: flex
+      align-items: center
+      justify-content: space-between
+      & svg
+        width: 25px
+        height: 25px
+        margin-right: 20px
+        fill: #FA7846
+        fill-rule: evenodd
+        clip-rule: evenodd
+  &__arrow
+    display: block
+    width: 25px
+    height: 25px
+    position: absolute
+    z-index: 3
+    left: 0
+    top: 0
+    &-svg
+      width: 25px
+      height: 25px
+      fill: #FA7846
+      position: absolute
+      z-index: 1
+      top: 0
+      right: 0
+    &-hidden
+      display: none
+ 
+.offer
+  position: relative
+  &__description
+    display: none
+    min-height: 100%
+    padding: 20px
+    padding-top: 35px
+    background-color: #fffffff1
+    border-radius: 4px
+    &-active
+      display: block
+    &>h4
+      color: #FA7846
+      text-align: center
+      margin-bottom: 1.5em
+
+
+@media (min-width:992px)
+  .offers
+    &__item:hover
+      color: #FA7846
+    &__button:hover
+      transition: 0.2s
+      background-color: #FA7846
+      color: #F9EEE9
+      & svg
+        transition: 0.2s
+        fill: #F9EEE9
+
+@media (max-width: 992px) 
+  .offers
+    &__description
+      width: 64%
+      height: 350px
+    &__list
+      width: 35%
+    &__item
+      font-size: 1.1em    
+
+  .offer
+    &__description
+      padding: 20px 25px
+      &>h4
+        margin-bottom: 1.1em 
+
+@media (max-width: 767px)
+  .offers
+    &__list
+      width: 100%
+      order: 1
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+      margin-bottom: 1em
+      &>li
+        width: 45%
+    &__description
+      width: 100%
+      order: 2
+    &__arrow
+      &-svg
+        transform: rotate(90deg)
+    &__button
+      order: 23
+     
+@media (max-width: 480px)
+  .offers
+    &__container
+      margin: 70px auto
+    &__wrapper
+      &::before
+        content: ''
+        position: absolute
+        width: 300px
+        height: 300px
+        left: 0
+        top: 0
+        background: rgba(250, 120, 70, 0.35)
+        filter: blur(70px)
+    &__list
+      &>li
+        width: 100%
+    &__description
+      height: auto
+      &__item
+        margin-bottom: 0.4em
+        padding: 5px
+    &__arrow
+      &-svg
+        width: 20px
+        height: 20px

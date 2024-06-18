@@ -1,0 +1,88 @@
+.footer 
+  background: #1E2533 
+  color: #F9EEE9
+  &__container
+    padding: 30px 0
+    display: flex
+    flex-wrap: wrap
+  &__social    
+    &-link
+      display: inline-block
+      width: 30px
+      height: 30px
+      margin-right: 1em
+    &-svg
+      transition: all ease-out 0.1s
+      width: 100%
+      height: 100%
+      fill: #F9EEE9
+      fill-rule: evenodd
+      clip-rule: evenodd
+  &__menu
+    list-style: none
+    margin-right: auto
+    & li
+      margin-bottom: 1em
+  &__logo
+    position: relative
+    width: 200px
+    height: 150px
+    &::before
+      content: ''
+      position: absolute
+      width: 0
+      height: 0 
+      left: 50%
+      top: 50%
+      transform: translate(-50%, -50%)
+      transition: all ease-out 0.3s
+      background: rgba(250, 121, 70, 0.548)
+      filter: blur(40px)
+    &-link
+      display: block
+      width: 100%
+      height: 100%
+      overflow: hidden
+      position: relative
+      z-index: 1
+    &-svg
+      width: 100%
+      height: 100%
+      fill: #F9EEE9
+      fill-rule: nonzero
+      cursor: pointer
+  &__contacts
+    margin-top: 2em
+    width:  100%
+  &__address
+    font-size: 0.8rem
+
+
+@media (min-width:992px)
+  .footer
+    &__social
+      &-link:hover .footer__social-svg
+        fill: #FA7846
+    &__menu>li>a:hover
+      color: #FA7846
+    &__logo
+      &:hover
+        &::before
+          width: 80px
+          height: 80px
+
+
+@media (max-width: 1200px) 
+  .footer
+    &__logo
+      height: 130px
+
+@media (max-width: 767px)  
+  .footer
+    &__social
+      &-link
+        width: 25px
+        height: 25px
+    &__logo
+      height: 80px
+

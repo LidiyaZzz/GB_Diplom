@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		@@include('blocks/head.html', {
+			"title": "Главная"
+		})
+		<link rel="stylesheet" href="css/swiper-bundle.min.css">
+		<link rel="stylesheet" href="css/style.css">	
+		<script async src="https://www.youtube.com/iframe_api"></script>
+	</head>
+
+	<body>
+		<header class="header">
+		@@include('blocks/headerNav.html')
+		@@include('blocks/mainSlider.html')
+		</header>
+
+		@@include('blocks/offers.html')
+		@@include('blocks/timetable.html')
+		@@include('blocks/exposition.html')
+		@@include('blocks/footer.html')
+		
+		@@include('blocks/autoScrollUp.html')
+		@@include('blocks/svg_sprite.html')
+		<script src="./js/index.js"></script>
+		<script src="../js/swiper-bundle.min.js"></script>
+		<script src="../js/generalSwiper.js"></script>
+		<script src="../js/expositionSwiper.js"></script>
+	</body>
+</html>

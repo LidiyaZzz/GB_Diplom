@@ -1,0 +1,67 @@
+.articlesList
+  background-color: #F9EEE9 
+  position: relative
+  overflow: hidden
+  &__decore
+    &::before
+        content: ''
+        position: absolute
+        width: 400px
+        height: 400px
+        right: 60%
+        top: 60%
+        background: rgba(250, 121, 70, 0.466)
+        filter: blur(200px)
+    &::after
+        content: ''
+        position: absolute
+        width: 400px
+        height: 400px
+        right: 5%
+        top: 10%
+        background: rgba(250, 121, 70, 0.253)
+        filter: blur(60px)
+        border-radius: 50%
+  &__container
+    padding: 100px 0
+    position: relative
+    z-index: 1     
+  &__select
+    width: 100%
+  &__columns
+    column-count: 3
+    column-gap: 2em
+  &__content
+    break-inside: avoid
+    border: 1px solid #FA7846
+    border-radius: 8px
+    margin-bottom: 2em
+    padding: 0.5em
+    &--unvisible
+        display: none
+  &__contentImg
+    width: 100%
+    border-radius: 8px
+    overflow: hidden   
+    &>img
+      border-radius: 8px
+      width: 100%
+  &__subtitle
+    margin-bottom: 1em        
+
+
+
+@media (max-width:992px)
+  .articlesList
+    &__columns
+        column-count: 2
+
+@media (max-width: 576px)
+  .articlesList
+    &__columns
+        column-count: 1
+
+  
+
+// @media (max-width: 480px)
+ 

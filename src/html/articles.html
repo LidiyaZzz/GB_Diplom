@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		@@include('blocks/head.html', {
+			"title": "Статьи"
+		})
+		<link rel="stylesheet" href="css/style.css">	
+		<script async src="https://www.youtube.com/iframe_api"></script>
+	</head>
+	<body>
+		<header class="header">
+		@@include('blocks/headerNav.html')
+		</header>
+		@@include('blocks/articlesList.html')
+		@@include('blocks/footer.html')		
+        @@include('blocks/autoScrollUp.html')
+		@@include('blocks/svg_sprite.html')
+	</body>
+</html>

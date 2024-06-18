@@ -1,0 +1,102 @@
+.offersV
+  position: relative
+  background: #1E2533
+  color: #F9EEE9
+  &::after
+    content: ''
+    position: absolute
+    background: #1E2533
+    width: 100%
+    height: 40px
+    right: 0
+    left: 0
+    bottom: -20px
+    border-bottom-right-radius: 30% 50%
+    border-bottom-left-radius: 30% 50%
+    z-index: 1
+  &__container
+    padding: 50px 0
+  &__title
+    width: 100%
+    font-weight: 400
+    text-transform: uppercase
+    margin-bottom: 2em
+  &__list
+    display: flex
+    justify-content: space-between
+  &__card
+    position: relative
+    width: 23%
+    border: 1px solid #FA7846
+    border-radius: 8px
+    min-height: 320px
+    &::after
+        position: absolute
+        content: '✔'
+        width: 40px
+        height: 40px
+        border-radius: 50%
+        background-color: #FA7846
+        color: #fff
+        display: flex
+        align-items: center
+        justify-content: center
+        top: 30px
+        left: -20px
+  &__cardImg
+    position: relative
+    top: 7px
+    left: 7px
+    width: 100%
+    height: 130px
+    border-radius: 8px
+    overflow: hidden
+    &>img
+        width: 100%
+        height: 100%
+        object-fit: cover
+  &__cardDescr
+    &>h2  
+        color: #FA7846
+        text-align: center
+        margin: 1.5em
+  &__cardList
+    color: #ffcdb9
+    margin: 0.5em
+    font-size: 0.9em
+  &__button
+    display: block
+    margin: auto
+    margin-top: 50px
+    background-color: #FA7846
+    color: #fff
+    & a
+      width: 100%
+      height: 100%
+      display: flex
+      align-items: center
+      justify-content: space-between
+      & svg
+        width: 25px
+        height: 25px
+        margin-right: 20px
+        fill: #fff
+        fill-rule: evenodd
+        clip-rule: evenodd
+    
+
+
+@media (max-width: 1200px)
+  .offersV
+    &__list
+      flex-wrap: wrap
+    &__card
+      width: 48%
+      margin-bottom: 1em
+
+@media (max-width: 576px)
+  .offersV
+    &__card
+      width: 90%
+      margin-bottom: 1em
+ 

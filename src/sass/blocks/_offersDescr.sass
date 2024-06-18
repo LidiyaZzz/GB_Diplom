@@ -1,0 +1,179 @@
+.offersDescr
+  background-color: #F9EEE9 
+  position: relative
+  overflow: hidden
+  &__decore
+    position: absolute
+    content: ''
+    width: 100%
+    top: 250px
+    left: 0
+    right: 0
+    bottom: 300px
+    background-color: #fa79463b
+    &::before
+        content: ''
+        position: absolute
+        width: 400px
+        height: 400px
+        right: 60%
+        top: 60%
+        background: rgba(250, 121, 70, 0.466)
+        filter: blur(200px)
+    &::after
+        content: ''
+        position: absolute
+        width: 400px
+        height: 400px
+        right: 5%
+        top: 10%
+        background: rgba(250, 121, 70, 0.253)
+        filter: blur(60px)
+        border-radius: 50%
+  &__container
+    padding: 100px 0
+    position: relative
+    z-index: 1     
+  &__content
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: start 
+    padding: 70px 0    
+    &--unvisible
+        display: none
+  &__contentImg
+    width: 30%    
+    position: relative   
+    &::after        
+        position: absolute   
+        content: ''
+        width: 100%
+        height: 100%
+        top: 10px
+        left: 10px
+        border: 1px solid #FA7846
+        border-radius: 8px
+        z-index: 100
+  &__contentWrapImg
+    border-radius: 8px
+    overflow: hidden   
+    &>img
+      border-radius: 8px 
+      width: 100%
+      height: 100%
+  &__contentText
+    padding-top: 130px
+    width: 65%
+  &__subtitle
+    margin-bottom: 1em
+  &__contentLink
+    font-weight: bold
+    color: #FA7846
+  &__button
+    display: block
+    margin-left: auto
+    margin-top: 50px
+    background-color: #FA7846
+    color: #fff
+    & a
+      width: 100%
+      height: 100%
+      display: flex
+      align-items: center
+      justify-content: space-between
+      & svg
+        width: 25px
+        height: 25px
+        margin-right: 20px
+        fill: #fff
+        fill-rule: evenodd
+        clip-rule: evenodd
+  &__video
+    width: 100%
+    padding-top: 100px
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    &-btn
+      position: absolute
+      width: 50px
+      height: 50px 
+      background-color: #ffffff91
+      border-width: 0px
+      border-radius: 50%
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      &>svg 
+        position: absolute
+        top: 0
+        left: 0
+        width: 50px
+        height: 50px
+        fill: white
+    &-wrapp
+      width: 700px
+      height: 400px
+      position: relative
+      background-color: #494949
+      border: 3px solid #ffffff    
+      
+  &__gallery
+    padding: 30px 0
+    overflow: hidden
+    position: relative
+    z-index: 4
+
+
+@media (min-width:992px)
+  .offersDescr
+    &__video
+      &-btn:hover
+        background-color: #ffffff
+        transition: all ease-out 0.2s
+        &>svg
+          transition: all ease-out 0.2s
+          fill: #ffcdb9
+    &__list
+        & li:hover 
+          color: #FA7846
+          &::after
+            color: #494949
+
+@media (max-width: 767px)
+  .offersDescr
+    &__content
+      padding: 0  
+    &__contentText
+      padding-top: 100px
+    &__video
+      &-wrapp
+        width: 90%
+        height: 300px
+
+
+@media (max-width: 576px)
+  .offersDescr
+    &__content
+      padding: 0  
+    &__contentText
+      padding-top: 20px
+      width: 100%
+    &__video
+      padding-top: 50px
+      &-wrapp
+        width: 90%
+        height: 250px
+
+@media (max-width: 480px)
+  .offersDescr
+    &__decore
+      bottom: 150px
+    &__video
+      padding-top: 2em
+      &-wrapp
+        width: 90%
+        height: 200px
+

@@ -1,0 +1,104 @@
+.mobmenu  
+  background: url(../img/decore/header_decore.jpg) 0 0/100% no-repeat
+  height: 40px
+  width: 100vw
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  z-index: 100
+  overflow: hidden
+  &__button 
+    display: block
+    width: 50px
+    padding: 10px
+    margin-left: auto
+    margin-right: 30px
+  &__burger
+    display: flex
+    align-items: center
+    justify-content: start
+    width: 25px
+    height: 30px
+  &__stiks    
+    position: relative
+    display: block
+    &--op
+      width: 25px
+      height: 2px
+      background-color: #1E2533  
+      transition-delay: 0.2s  
+      &::before,
+      &::after      
+        content: ""
+        width: 25px
+        height: 2px
+        background-color: #1E2533
+        position: absolute
+        right: 0
+        left: 0
+      &::before      
+        top: -6px
+        transition: all ease-in 0.2s
+      &::after
+        bottom: -6px
+        transition: all ease-in 0.2s
+    &--cl
+      width: 0
+      height: 2px
+      background-color: #1E2533
+      &::before,
+      &::after      
+        content: ""
+        width: 25px
+        height: 2px
+        background-color: #1E2533
+        position: absolute
+        right: 0
+        left: 0
+      &::before      
+        top: 0
+        transform: rotate(-45deg)
+        transition: all ease-in 0.2s
+      &::after
+        bottom: 0
+        transform: rotate(45deg)
+        transition: all ease-in 0.2s
+  &__menu
+    position: fixed
+    left: 0
+    right: 0
+    top: 40px
+    bottom: 0
+    z-index: 99
+    background-color: #f9eee9e7
+    &--unvis
+      display: none
+    &--vis
+      display: block
+  &__list
+    padding: 40px 0
+    list-style: none
+    &>li
+      text-align: center
+      margin-top: 1.5em
+      font-weight: 600
+  &__social
+    text-align: center
+    width: 80vw
+    margin: auto
+    &-link
+      width: 30px
+      height: 30px
+      display: inline-block
+      &:not(:first-child)
+        margin-left: 10px
+    &-svg
+      transition: all ease-out 0.1s
+      width: 100%
+      height: 100%
+      fill: #1E2533
+      fill-rule: evenodd
+      clip-rule: evenodd 
+
+

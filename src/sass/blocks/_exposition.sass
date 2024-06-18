@@ -1,0 +1,161 @@
+.exposition
+  background-color: #F9EEE9 
+  position: relative
+  overflow: hidden
+  &::before
+    content: ''
+    position: absolute
+    width: 100%
+    height: 250px
+    left: 0
+    bottom: 0
+    right: 0
+    background-color: #fff
+  &__container
+    padding: 100px 0
+  &__subtitle
+    margin-bottom: 1em
+  &__description
+    width: 450px
+  &__video
+    padding-top: 100px
+    position: relative
+    display: flex
+    justify-content: space-between
+    align-items: start
+    &-btn
+      position: absolute
+      width: 50px
+      height: 50px 
+      background-color: #ffffff91
+      border-width: 0px
+      border-radius: 50%
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      &>svg 
+        position: absolute
+        top: 0
+        left: 0
+        width: 50px
+        height: 50px
+        fill: white
+    &-wrapp
+      width: 700px
+      height: 400px
+      position: relative
+      background-color: #494949
+      border: 3px solid #ffffff    
+      
+  &__gallery
+    padding: 30px 0
+    overflow: hidden
+    position: relative
+    z-index: 4
+
+.gallery
+  &__slide
+    &-wrap
+      height: 440px
+  &__img
+    height: 380px
+    overflow: hidden
+    border-radius: 2px
+    box-shadow: 0 0 10px #1e25338c
+  &__btn
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    width: 50px
+    height: 50px
+    background: none
+    border: none
+    z-index: 4
+    transition: all ease-out 0.2s
+    &:disabled
+      opacity: 0
+    &-prev
+      right: 0
+      & .gallery__btn-svg
+        right: 0
+        transform: translateY(-50%)
+    &-next
+      left: 0
+      & .gallery__btn-svg
+        left: 0
+        transform: translateY(-50%)
+    &-svg
+      position: absolute
+      top: 50%
+      width: 18px
+      height: 18px
+      fill: #FA7846
+
+.exposition__gallery
+  overflow: visible
+
+
+
+@media (min-width:992px)
+  .exposition
+    &__video
+      &-btn:hover
+        background-color: #ffffff
+        transition: all ease-out 0.2s
+        &>svg
+          transition: all ease-out 0.2s
+          fill: #ffcdb9
+
+
+@media (max-width: 1300px)  
+  .exposition
+    &__video
+      &-wrapp
+        width: 60%
+    &__description
+      width: 35%
+
+
+@media (max-width: 1200px) 
+  .exposition
+    &__video
+      &-wrapp
+        height: 370px
+
+@media (max-width: 992px)
+  .exposition
+    &__container
+      padding: 60px 0
+    &__video
+      &-wrapp
+        width: 64%
+        height: 340px 
+      
+
+@media (max-width: 767px)
+  .gallery
+    &__slide
+      &-wrap
+        height: 370px
+    &__img
+      height: 360px
+
+  .exposition
+    &__gallery
+      padding: 0
+    &__video
+      flex-wrap: wrap
+      &-wrapp
+        width: 100%
+        position: relative
+    &__description
+      width: 100%
+      margin-bottom: 1em
+
+
+@media (max-width: 480px)
+  .exposition
+    &__video
+      padding-top: 70px
+      &-wrapp
+        height: 260px
